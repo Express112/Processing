@@ -1,0 +1,28 @@
+void setup() { 
+  fullScreen();
+  //size(600, 400)
+  frameRate(80);
+}
+
+color fillVal = color(126);
+
+void draw() {
+ background(255);
+ rectMode(CENTER);
+ fill(200, 100, 100);
+ rect(X, height-10, 150, 10);
+}
+
+void keyPressed() {
+  if (key == LEFT) {
+    
+    if (keyCode == UP) {
+      fillVal = 140;
+    } else if (keyCode == DOWN) {
+      fillVal = 90;
+    } 
+  } else {
+    fillVal = 126;
+  }
+}
+ 
