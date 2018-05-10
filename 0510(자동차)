@@ -1,0 +1,22 @@
+
+int x = 100;
+int y = 100;
+int thesize = 64;
+int offset = thesize/4;
+void setup() 
+{size(1650, 900);
+background(255);
+}
+  
+  void draw(){
+rectMode(CENTER);
+stroke(0);
+fill(1500, 25, 25);
+rect(x, y, thesize, thesize/2);
+
+fill(190, 250, 35);
+rect(x - offset, y - offset, offset, offset/2);
+rect(x + offset, y - offset, offset, offset/2);
+rect(x - offset, y + offset, offset, offset/2);
+rect(x + offset, y + offset, offset, offset/2);
+  }
