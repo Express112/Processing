@@ -1,0 +1,55 @@
+Car myCar;
+Car yourCar;
+ 
+
+ void setup() {
+   myCar = new Car(color(255, 0, 0), 100, 100, 3  );
+   yourCar = new Car ( color(0, 255, 0), 0, 200, 2 );
+   size(800, 600);
+ }
+ 
+ void draw () {
+   background(0);
+   myCar.display(50, 30);
+   myCar.drive();
+    yourCar.display(100, 20);
+   yourCar.drive();
+ 
+ }
+ 
+ 
+ class Car {    // Class Name
+  color c;
+int xpos;
+int ypos;     //data
+int xspeed;
+
+Car() {
+   
+  c= color(255);        //producer
+  xpos = width/2;
+  ypos = height/2;
+  xspeed =1;
+}
+Car (color tempC, int tempXpos, int tempYpos, int tempXspeed) {
+  c = tempC;
+  xpos = tempXpos;
+  ypos = tempYpos;
+  xspeed = tempXspeed;
+}
+
+
+
+void display(int x,int y){
+  rectMode(CENTER);      //function
+  fill(c);
+  rect(xpos, ypos, x, y);
+}
+
+void drive(){
+  xpos= xpos + xspeed;
+  if (xpos > width) {
+    xpos = 0;
+   }
+ }
+}
